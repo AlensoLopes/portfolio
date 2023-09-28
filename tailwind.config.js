@@ -26,6 +26,16 @@ export const theme = {
       500: '#272734'
     },
     tertiary: '#1f1f29',
+    background: {
+      100: '#10002b',
+      200: '#240046',
+      300: '#3c096c',
+      400: '#5a189a',
+      500: '#7b2cbf',
+      600: '#9d4edd',
+      700: '#c77dff',
+      800: '#e0aaff'
+    },
     green: {
       0: '#ffffff',
       100: '#d3f3dd',
