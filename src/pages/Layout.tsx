@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer, Presentation } from '../components';
 import PropTypes from 'prop-types';
 
 interface LayoutProps {
@@ -9,8 +9,9 @@ interface LayoutProps {
 const Layout : FunctionComponent<LayoutProps> = ({children}) => {
   return (
     <div>
-      <Header />
-      <div className='flex h-screen'>
+      <Header name="Projects"/>
+      <div className='flex h-screen bg-secondary-480'>
+        <Presentation/>
         {children}
       </div>
       <Footer/>
