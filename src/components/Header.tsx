@@ -2,7 +2,7 @@ import React from 'react';
 
 const Picture = 'https://avatars.githubusercontent.com/u/46823570?v=4';
 
-export const Header = ({ name } : {name:string}) => {
+export const Header = ({ name } : { name : string }) => {
   return (
     <header className='px-5 lg:px-36 py-4 flex flex-row
       justify-between items-center fixed top-0 bg-secondary-500 backdrop-blur-sm
@@ -15,7 +15,7 @@ export const Header = ({ name } : {name:string}) => {
       </div>
       <div className='flex flex-row items-center'>
         <h1 className='text-white text-xl'>
-          <a href=''>
+          <a href='' className='animate-spin hover:underline'>
             {name}
           </a>
         </h1>
