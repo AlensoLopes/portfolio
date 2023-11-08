@@ -1,13 +1,11 @@
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Presentation } from './Presentation';
-import { Projects } from './Projects';
-import { ProjectCard } from './Card';
+import { Skills } from './Skills';
 
 export{
   Header,
   Footer,
   Presentation,
-  Projects,
-  ProjectCard
+  Skills
 };
