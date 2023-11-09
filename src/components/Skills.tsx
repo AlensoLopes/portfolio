@@ -1,47 +1,57 @@
-import { get } from 'http';
 import * as React from 'react';
-// import { API_LOGO_KEY }  from '../assets/conf/config.json';
-
-const api_key = 'YmWmVjnrHAnGAj/kjd/qts3pEJZKfktVI8+ANI/yQfE=';
-const API_URL = 'https://api.brandfetch.io/v2/brands/';
-
-async function getLogo(companyName : string){
-  const url = API_URL + companyName;
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer ' + api_key
-    }
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then((data) => {
-      return data;
-    })
-    .catch((error) => {
-      console.error('Fetch error:', error);
-    });
-  return response.logos[0].formats[0].src;
-}
 
 export const Skills = () => {
-  const react = getLogo('Microsoft.com');
   return (
-    <div className='flex justify-center bg-secondary-480 flex-col border-t
-    border-secondary-450 py-2 items-center'>
-      <div className='flex justify-center py-6'>
-        <h1 className='text-4xl text-white'>Skills</h1>
-      </div>
-      <div className='flex justify-center w-full flex-col items-center gap-2'>
-        <h1 className='text-4xl text-white gap-4'>FrontEnd</h1>
-        <h2 className='text-2xl text-white'>Technologies</h2>
-        <div className='flex flex-wrap'>
+    <section className="flex flex-col w-full
+       px-16 flex-wrap">
+      <div className='flex justify-start'>
+        <div className='flex-col
+          w-60 h-44 max-w-md rounded-2xl bg-white p-2'>
+          <h1 className='text-background-100 text-2xl'>
+            Languages
+          </h1>
+          <div className='flex flex-col px-8 py-4 gap-16'>
+            <ul className='text-background-100'>
+              <li>Java</li>
+              <li>TypeScript</li>
+              <li>C</li>
+              <li>PHP</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+      <div className='flex justify-end'>
+        <div className='flex-col
+          w-60 h-44 max-w-md rounded-2xl bg-white p-2
+          flex justify-end'>
+          <h1 className='text-background-100 text-2xl'>Framework</h1>
+          <div className='flex flex-col px-8 py-4 gap-16'>
+            <ul className='text-background-100'>
+              <li>React</li>
+              <li>Express</li>
+              <li>Tailwindcss</li>
+              <li>NodeJS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className='flex justify-start'>
+        <div className='flex-col
+          w-60 h-44 max-w-md rounded-2xl bg-white p-2
+          flex'>
+          <h1 className='text-background-100 text-2xl'>
+            Tools
+          </h1>
+          <div className='flex justify-start py-4 px-8 gap-16'>
+            <ul className='text-background-100'>
+              <li>Git</li>
+              <li>Postman</li>
+              <li>Linux</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };

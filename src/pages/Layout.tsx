@@ -9,12 +9,14 @@ interface LayoutProps {
 
 const Layout : FunctionComponent<LayoutProps> = ({children}) => {
   return (
-    <div>
+    <div className='bg-secondary-480'>
       <Header name="Projects"/>
-      <div className='flex h-screen bg-secondary-480'>
+      <div className='flex h-screen'>
         <Presentation/>
       </div>
-      <Skills/>
+      <div className='flex flex-col lg:px-36 px-5'>
+        <Skills/>
+      </div>
       {children}
       <Footer/>
     </div>

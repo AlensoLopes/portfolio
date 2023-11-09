@@ -133,6 +133,9 @@ export const theme = {
           transform: 'scale(0.9)'
         }
       }
+    },
+    backgroundImage: {
+      'test': 'url("/src/assets/pictures/Learning-bro.svg")'
     }
   }
 };
