@@ -71,11 +71,11 @@ export const Skills = () => {
     //     </ul>
     //   </div>
     // </div>
-    <section className='flex flex-col md:flex-nowrap flex-wrap'>
-      <div className='flex py-8 justify-center'>
+    <section className='flex flex-col flex-wrap'>
+      <div className='flex py-8 md:justify-center'>
         <h1 className='text-white text-2xl'>Skills</h1>
       </div>
-      <div className='flex justify-evenly'>
+      <div className='flex flex-col md:flex-row md:justify-evenly'>
         <div className='md:w-28'>
           <h2 className='text-white text-xl'>
             Languages
@@ -118,5 +118,6 @@ export const Skills = () => {
         </div>
       </div>
     </section>
+
   );
 };
