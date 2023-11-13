@@ -11,7 +11,7 @@ const Layout : FunctionComponent<LayoutProps> = ({children}) => {
   return (
     <div className='bg-secondary-480'>
       <Header name="Projects"/>
-      <div className='flex h-[75vh]'>
+      <div className='flex h-[70vh]'>
         <Presentation/>
       </div>
       <div className='flex flex-col lg:px-36 px-5'>

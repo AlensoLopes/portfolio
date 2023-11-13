@@ -71,12 +71,12 @@ export const Skills = () => {
     //     </ul>
     //   </div>
     // </div>
-    <section className='flex flex-col w-full flex-wrap'>
+    <section className='flex flex-col md:flex-nowrap flex-wrap'>
       <div className='flex py-8 justify-center'>
         <h1 className='text-white text-2xl'>Skills</h1>
       </div>
       <div className='flex justify-evenly'>
-        <div className='w-28'>
+        <div className='md:w-28'>
           <h2 className='text-white text-xl'>
             Languages
           </h2>
@@ -90,9 +90,9 @@ export const Skills = () => {
             </ul>
           </div>
         </div>
-        <div className='w-28'>
+        <div className='md:w-28'>
           <h2 className='text-white text-xl'>
-            Framework
+            Frameworks
           </h2>
           <div className=''>
             <ul className='py-4 text-white'>
@@ -103,7 +103,7 @@ export const Skills = () => {
             </ul>
           </div>
         </div>
-        <div className='w-28'>
+        <div className='md:w-28'>
           <h2 className='text-white text-xl'>
             Tools
           </h2>
