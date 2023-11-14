@@ -13,7 +13,7 @@ export const Presentation = () => {
           <p>Studing in University Caen Normandie in a University Bachelor.</p>
         </div>
       </div>
-      <div className='flex flex-col px-4 lg:px-32 py-4'>
+      <div className='flex flex-col px-4 lg:px-32 py-8'>
         <img src='https://avatars.githubusercontent.com/u/46823570?v=4'
           alt='' className='rounded-full sm:w-40 sm:h-40 w-20 h-20 '/>
       </div>

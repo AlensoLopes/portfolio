@@ -72,7 +72,7 @@ export const Skills = () => {
     //   </div>
     // </div>
     <section className='flex flex-col flex-wrap'>
-      <div className='flex py-8 md:justify-center'>
+      <div className='flex py-8 justify-center'>
         <h1 className='text-white text-2xl'>Skills</h1>
       </div>
       <div className='flex flex-col md:flex-row md:justify-evenly'>
