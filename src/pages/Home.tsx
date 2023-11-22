@@ -19,6 +19,15 @@ export const Home = () => {
           {skills.map((skill: Skill, index: number) => (
             <div key={index} className='flex flex-col items-center'>
               <h1>{skill.title}</h1>
+              <div className='flex flex-col gap-2'>
+                {skill.value.map((skill, index) => (
+                  <div key={index} className=''>
+                    <ul className='flex flex-col '>
+                      <li>{skill}</li>
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </Section>
