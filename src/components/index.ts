@@ -1,11 +1,11 @@
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Presentation } from './Presentation';
-import { Skills } from './Skills';
+import { Section } from './Section';
 
 export{
   Header,
   Footer,
   Presentation,
-  Skills
+  Section
 };

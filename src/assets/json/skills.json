@@ -1,0 +1,30 @@
+[
+  {
+    "title": "languages",
+    "value": [
+      "Java(FX)",
+      "TypeScript",
+      "C",
+      "PHP",
+      "SQL"
+    ]
+  },
+  {
+    "title": "frameworks / libraries",
+    "value": [
+      "React",
+      "ExpressJS",
+      "Laravel",
+      "Tailwindcss"
+    ]
+  },
+  {
+    "title": "tools",
+    "value": [
+      "Git",
+      "SceneBuilder",
+      "Linux",
+      "API Rest"
+    ]
+  }
+]
