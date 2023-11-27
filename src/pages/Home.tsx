@@ -24,20 +24,18 @@ export const Home = () => {
       <div className='flex flex-col lg:px-36 px-5'>
         <Section
           title='Skills'
-          icon={<FontAwesomeIcon icon='laptop-code' />}
+          icon={<FontAwesomeIcon icon='laptop-code'/>}
         >
           {skills.map((skill: Skill, index: number) => (
-            <div key={index} className='flex flex-col items-center text-white'>
-              <h1 className='w-40'>{skill.title}</h1>
-              <div className='flex flex-col'>
-                <ul className='flex flex-col'>
-                  {skill.value.map((value: string, index: number) => (
-                    <li key={index} className='text-white'>
-                      {value}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div key={index} className='flex flex-col text-white'>
+              <h1 className='py-2 text-xl'>{skill.title}</h1>
+              <ul className='flex flex-col'>
+                {skill.value.map((value: string, index: number) => (
+                  <li key={index} className='text-white text-md'>
+                    {value}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </Section>
@@ -46,12 +44,8 @@ export const Home = () => {
         >
           {education.map((education: Education, index: number) => (
             <div key={index} className='flex flex-col items-center text-white'>
-              <h1 className='w-40'>{education.title}</h1>
-              <div className='flex flex-col'>
-                <ul className='flex flex-col'>
-                  <li className='text-white'>{education.resume}</li>
-                </ul>
-              </div>
+              <h1 className=''>{education.title}</h1>
+              <p className='text-white'>{education.resume}</p>
             </div>
           ))}
         </Section>
