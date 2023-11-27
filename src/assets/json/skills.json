@@ -1,6 +1,6 @@
 [
   {
-    "title": "languages",
+    "title": "Languages",
     "value": [
       "Java(FX)",
       "TypeScript",
@@ -10,7 +10,7 @@
     ]
   },
   {
-    "title": "frameworks / libraries",
+    "title": "Frameworks / Libraries",
     "value": [
       "React",
       "ExpressJS",
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "title": "tools",
+    "title": "Tools",
     "value": [
       "Git",
       "SceneBuilder",
