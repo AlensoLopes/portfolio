@@ -1,12 +1,18 @@
 import React from 'react';
 import { Layout } from './';
 import { Presentation, Section } from '../components';
-import skills from '../assets/json/skills.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import skills from '../assets/json/skills.json';
+import education from '../assets/json/education.json';
 
 interface Skill {
   title: string;
   value: string[];
+}
+
+interface Education {
+  title: string;
+  resume: string;
 }
 
 export const Home = () => {
@@ -38,15 +44,16 @@ export const Home = () => {
         <Section title='Education'
           icon={<FontAwesomeIcon icon='graduation-cap' />}
         >
-          <div className='flex flex-col items-center text-white'>
-            <h1 className='w-40'>University Caen Normandie</h1>
-            <div className='flex flex-col'>
-              <ul className='flex flex-col'>
-                <li className='text-white'>University Bachelor</li>
-                <li className='text-white'>Software & Web Developpement</li>
-              </ul>
+          {education.map((education: Education, index: number) => (
+            <div key={index} className='flex flex-col items-center text-white'>
+              <h1 className='w-40'>{education.title}</h1>
+              <div className='flex flex-col'>
+                <ul className='flex flex-col'>
+                  <li className='text-white'>{education.resume}</li>
+                </ul>
+              </div>
             </div>
-          </div>
+          ))}
         </Section>
         <Section title='Projects'
           icon={<FontAwesomeIcon icon='briefcase' />}
