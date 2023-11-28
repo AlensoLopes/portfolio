@@ -8,7 +8,7 @@ interface ISection {
 
 export const Section: FC<ISection> = ({title, children, icon}) => {
   return (
-    <section className='flex flex-col w-full flex-wrap '>
+    <section className='flex flex-col w-full flex-wrap'>
       {title && (
         <div className='flex py-8 gap-4 flex-row items-center justify-center
         w-full'>

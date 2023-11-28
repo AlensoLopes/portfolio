@@ -1,10 +1,14 @@
 [
   {
     "title": "University Caen Normandie",
-    "resume": "BUT Informatique"
+    "location": "Caen",
+    "resume": "BUT Informatique",
+    "date": "2022 - 2025"
   },
   {
-    "title": "Lycée La Chataigneraie Mesnil Esnard",
-    "resume": "Baccalauréat STI2D option SIN"
+    "title": "Lycée La Chataigneraie",
+    "location": "Mesnil-Esnard",
+    "resume": "Baccalauréat STI2D option SIN",
+    "date": "2019 - 2022"
   }
 ]
