@@ -2,13 +2,15 @@
   {
     "title": "University Caen Normandie",
     "location": "Caen",
-    "resume": "BUT Informatique",
-    "date": "2022 - 2025"
+    "degree": "BUT Informatique",
+    "date": "2022 - 2025",
+    "resume" : "Le BUT Informatique, anciennement connu sous le nom de DUT Informatique, est un diplôme universitaire de technologie de niveau bac+2 en France. Ce diplôme est décerné aux étudiants qui ont suivi une formation technique et professionnalisante dans le domaine de l'informatique. Voici un résumé des principaux aspects du BUT Informatique :"
   },
   {
     "title": "Lycée La Chataigneraie",
     "location": "Mesnil-Esnard",
-    "resume": "Baccalauréat STI2D option SIN",
-    "date": "2019 - 2022"
+    "degree": "Baccalauréat STI2D option SIN",
+    "date": "2019 - 2022",
+    "resume" : "Le BUT Informatique, anciennement connu sous le nom de DUT Informatique, est un diplôme universitaire de technologie de niveau bac+2 en France. Ce diplôme est décerné aux étudiants qui ont suivi une formation technique et professionnalisante dans le domaine de l'informatique. Voici un résumé des principaux aspects du BUT Informatique :"
   }
 ]

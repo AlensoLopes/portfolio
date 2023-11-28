@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout } from './';
 import { Presentation, Section } from '../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import skills from '../assets/json/skills.json';
 import education from '../assets/json/education.json';
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
 
 interface Skill {
@@ -14,12 +14,14 @@ interface Skill {
 
 interface Education {
   title: string;
-  resume: string;
+  degree: string;
   location: string;
   date: string;
+  resume: string;
 }
 
 export const Home = () => {
+  const [open, setOpen] = useState(false);
   return (
     <Layout>
       <div className='flex h-[75vh]'>
@@ -50,23 +52,45 @@ export const Home = () => {
             <ul className='text-white w-full'>
               {education.map((education: Education, index: number) => (
                 <div key={index} className='flex flex-col items-center text-white
-                w-full'>
+                w-full py-2'>
                   <Disclosure>
-                    <Disclosure.Button className={'w-full'}>
+                    <Disclosure.Button className={'w-full'} onClick=
+                      {() => setOpen((open) => !open)}>
                       <div className='flex flex-row border rounded-md
                       justify-between gap-4 px-2 items-center'>
                         <h1 className=''>{education.date}</h1>
                         <h1 className=''>{education.title}</h1>
                         <ChevronUpIcon
-                          className={'h-5 w-5 text-purple-500'}
+                          className={`${
+                            open ? 'rotate-180 transform' : ''
+                          } h-5 w-5 text-purple-500`}
                         />
                       </div>
                     </Disclosure.Button>
-                    <Disclosure.Panel>
-                      <p className='text-white'>
-                        <FontAwesomeIcon icon='location-dot'
-                          className='text-red-600'/>
-                        {education.location} {education.resume}</p>
+                    <Transition
+                      show={open}
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    ></Transition>
+                    <Disclosure.Panel className={'w-full'}>
+                      <div className='flex flex-col items-center py-2'>
+                        <p className='text-white'>
+                          <i><FontAwesomeIcon
+                            icon='location-dot'
+                            className='text-red-600'/>
+                          </i> &nbsp;
+                          {education.location} - &nbsp;
+                          <FontAwesomeIcon icon='graduation-cap' /> &nbsp;
+                          {education.degree}
+                        </p>
+                        <p className='text-white py-2'>
+                          {education.resume}
+                        </p>
+                      </div>
                     </Disclosure.Panel>
                   </Disclosure>
                 </div>
