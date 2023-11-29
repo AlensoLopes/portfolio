@@ -12,7 +12,7 @@ export const Section: FC<ISection> = ({title, children, icon}) => {
       {title && (
         <div className='flex py-8 gap-4 flex-row items-center justify-center
         w-full'>
-          <h1 className='text-white text-2xl'>{icon}</h1>
+          <span className='text-white text-2xl'>{icon}</span>
           <h1 className='text-white text-2xl'>{title}</h1>
           <hr className='border-tertiary-450 w-full'/>
         </div>

@@ -53,10 +53,11 @@ export const Home = () => {
                 <div key={index} className='flex flex-col items-center text-white
                 w-full py-2'>
                   <Disclosure>
-                    <Disclosure.Button className={'w-full'}
+                    <Disclosure.Button className={'w-full h-8'}
                       data-headlessui-state="open">
                       <div className='flex flex-row border rounded-md
-                      justify-between sm:gap-4 px-2 items-center'>
+                      justify-between gap-4 sm:px-2 px-1 items-center h-10 text-sm
+                      sm:text-base sm:h-8'>
                         <h1 className=''>{education.date}</h1>
                         <h1 className=''>{education.title}</h1>
                         <ChevronUpIcon
