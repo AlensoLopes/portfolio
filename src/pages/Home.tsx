@@ -52,7 +52,7 @@ export const Home = () => {
               {education.map((education: Education, index: number) => (
                 <div key={index} className='flex flex-col items-center text-white
                 w-full py-2'>
-                  <Disclosure>
+                  <Disclosure defaultOpen={index === 0}>
                     <Disclosure.Button className={'w-full h-8'}
                       data-headlessui-state="open">
                       <div className='flex flex-row border rounded-md
