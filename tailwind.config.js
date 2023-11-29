@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindui from '@headlessui/tailwindcss';
 export const content = [
   './src/**/**/*.{js,jsx,ts,tsx}'
 ];
@@ -139,4 +140,6 @@ export const theme = {
     }
   }
 };
-export const plugins = [];
+export const plugins = [
+  tailwindui({ prefix: 'ui' })
+];

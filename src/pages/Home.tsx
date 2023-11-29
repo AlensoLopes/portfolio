@@ -21,7 +21,6 @@ interface Education {
 }
 
 export const Home = () => {
-  const [open, setOpen] = useState(false);
   return (
     <Layout>
       <div className='flex h-[75vh]'>
@@ -54,21 +53,19 @@ export const Home = () => {
                 <div key={index} className='flex flex-col items-center text-white
                 w-full py-2'>
                   <Disclosure>
-                    <Disclosure.Button className={'w-full'} onClick=
-                      {() => setOpen((open) => !open)}>
+                    <Disclosure.Button className={'w-full'}
+                      data-headlessui-state="open">
                       <div className='flex flex-row border rounded-md
-                      justify-between gap-4 px-2 items-center'>
+                      justify-between sm:gap-4 px-2 items-center'>
                         <h1 className=''>{education.date}</h1>
                         <h1 className=''>{education.title}</h1>
                         <ChevronUpIcon
-                          className={`${
-                            open ? 'rotate-180 transform' : ''
-                          } h-5 w-5 text-purple-500`}
+                          className="ui-open:rotate-180 ui-open:transform h-5
+                          transition-transform duration-500"
                         />
                       </div>
                     </Disclosure.Button>
                     <Transition
-                      show={open}
                       enter="transition duration-100 ease-out"
                       enterFrom="transform scale-95 opacity-0"
                       enterTo="transform scale-100 opacity-100"
