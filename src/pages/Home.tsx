@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Layout } from './';
 import { Presentation, Section } from '../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -67,29 +67,30 @@ export const Home = () => {
                       </div>
                     </Disclosure.Button>
                     <Transition
-                      enter="transition duration-100 ease-out"
-                      enterFrom="transform scale-95 opacity-0"
-                      enterTo="transform scale-100 opacity-100"
-                      leave="transition duration-75 ease-out"
-                      leaveFrom="transform scale-100 opacity-100"
-                      leaveTo="transform scale-95 opacity-0"
-                    ></Transition>
-                    <Disclosure.Panel className={'w-full'}>
-                      <div className='flex flex-col items-center py-2'>
-                        <p className='text-white'>
-                          <i><FontAwesomeIcon
-                            icon='location-dot'
-                            className='text-red-600'/>
-                          </i> &nbsp;
-                          {education.location} - &nbsp;
-                          <FontAwesomeIcon icon='graduation-cap' /> &nbsp;
-                          {education.degree}
-                        </p>
-                        <p className='text-white py-2'>
-                          {education.resume}
-                        </p>
-                      </div>
-                    </Disclosure.Panel>
+                      enter="transition duration-200 ease-out"
+                      enterFrom="opacity-0 scale-95"
+                      enterTo="opacity-100 scale-100"
+                      leave="transition duration-200 ease-out"
+                      leaveFrom="opacity-100 scale-100"
+                      leaveTo="opacity-0 scale-95"
+                    >
+                      <Disclosure.Panel className={'w-full'}>
+                        <div className='flex flex-col items-center py-2'>
+                          <p className='text-white'>
+                            <i><FontAwesomeIcon
+                              icon='location-dot'
+                              className='text-red-600'/>
+                            </i> &nbsp;
+                            {education.location} - &nbsp;
+                            <FontAwesomeIcon icon='graduation-cap' /> &nbsp;
+                            {education.degree}
+                          </p>
+                          <p className='text-white py-2'>
+                            {education.resume}
+                          </p>
+                        </div>
+                      </Disclosure.Panel>
+                    </Transition>
                   </Disclosure>
                 </div>
               ))}
