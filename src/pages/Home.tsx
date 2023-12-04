@@ -74,7 +74,7 @@ export const Home = () => {
                       leaveFrom="opacity-100 scale-100"
                       leaveTo="opacity-0 scale-95"
                     >
-                      <Disclosure.Panel className={'w-full'}>
+                      <Disclosure.Panel className={'w-full sm:py-0 py-4'}>
                         <div className='flex flex-col items-center py-2'>
                           <p className='text-white'>
                             <i><FontAwesomeIcon
