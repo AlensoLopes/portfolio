@@ -1,8 +1,8 @@
 [
   {
     "name" : "BattleshipFX",
-    "description" : "A JavaFX version of the classic Battleship game.",
-    "image" : "",
+    "description" : "A JavaScript application that displays the current weather for a given location. ",
+    "image" : "https://tailwindcss.com/_next/static/media/classic-utility-jacket.82031370.jpg",
     "languages": [
       {
         "name": "Java(FX)",

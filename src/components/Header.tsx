@@ -5,7 +5,8 @@ const Picture = 'https://avatars.githubusercontent.com/u/46823570?v=4';
 export const Header = ({ name } : { name : string }) => {
   return (
     <header className='px-5 lg:px-36 py-4 flex flex-row
-      justify-between items-center sticky top-0 bg-secondary-500 backdrop-blur-sm
+      justify-between items-center sticky z-10 top-0 bg-secondary-500
+      backdrop-blur-sm
       '>
       <div className='flex flex-row items-center lg:px-10 gap-4 px-4'>
         <img src={

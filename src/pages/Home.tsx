@@ -4,8 +4,10 @@ import { Presentation, Section } from '../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import skills from '../assets/json/skills.json';
 import education from '../assets/json/education.json';
+import projects from '../assets/json/projects.json';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import logo from '../assets/pictures/logo-placeholder.jpg';
 
 interface Skill {
   title: string;
@@ -18,6 +20,13 @@ interface Education {
   location: string;
   date: string;
   resume: string;
+}
+
+interface Project {
+  name: string;
+  description: string;
+  image?: string;
+  languages: {name: string, image: string}[];
 }
 
 export const Home = () => {
@@ -98,19 +107,36 @@ export const Home = () => {
           </div>
         </Section>
         <Section title='Projects'
-          icon={<FontAwesomeIcon icon='briefcase' />}
+          icon={<FontAwesomeIcon icon='briefcase'/>}
         >
-          <div className='flex flex-col items-center text-white'>
-            <h1 className='w-40'>Portfolio</h1>
-            <div className='flex flex-col'>
-              <ul className='flex flex-col'>
-                <li className='text-white'>This portfolio</li>
-                <li className='text-white'>ReactJS</li>
-                <li className='text-white'>TailwindCSS</li>
-                <li className='text-white'>Material Tailwind</li>
-              </ul>
-            </div>
-          </div>
+          <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full'>
+            {projects.map((project: Project, index: number) => (
+              <div className='border flex'>
+                <li key={index} className='flex flex-col text-white
+                w-full'>
+                  <div className='flex flex-col items-center text-white w-full'>
+                    <img src={logo} alt={project.name}
+                      className=' rounded-md'/>
+                    <h1 className='text-white text-xl'>{project.name}</h1>
+                    <p className='text-white text-md px-4'>
+                      {project.description}</p>
+                  </div>
+                  <div className='flex flex-row gap-4 py-2 px-6 border-t
+                  align-bottom'>
+                    {project.languages.map((langage: {name: string,
+                    image: string},
+                    index: number) => (
+                      <div key={index} className='flex flex-col
+                      text-white justify-start'>
+                        <img src={langage.image} alt={langage.name}
+                          className='h-4 w-4'/>
+                      </div>
+                    ))}
+                  </div>
+                </li>
+              </div>
+            ))}
+          </ul>
         </Section>
       </div>
     </Layout>
