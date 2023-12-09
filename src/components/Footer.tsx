@@ -9,7 +9,7 @@ export const Footer = () => {
         Alenso.L</h1>
       <div>
         <p className='text-white opacity-80 font-medium'>
-        &copy; {date}. All right reserved.
+        &copy; { date }. All right reserved.
         </p>
       </div>
     </footer>

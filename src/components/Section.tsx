@@ -6,7 +6,7 @@ interface ISection {
   icon?: any;
 }
 
-export const Section: FC<ISection> = ({title, children, icon}) => {
+export const Section: FC<ISection> = ({ title, children, icon }) => {
   return (
     <section className='flex flex-col w-full flex-wrap'>
       {title && (
@@ -19,7 +19,7 @@ export const Section: FC<ISection> = ({title, children, icon}) => {
       )}
       <div className='flex flex-row sm:justify-evenly flex-wrap gap-8 sm:gap-4
       justify'>
-        {children}
+        { children }
       </div>
     </section>
   );

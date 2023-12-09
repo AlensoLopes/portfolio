@@ -8,6 +8,7 @@ import projects from '../assets/json/projects.json';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
 import logo from '../assets/pictures/logo-placeholder.jpg';
+import { Button } from '../components';
 
 interface Skill {
   title: string;
@@ -31,7 +32,7 @@ interface Project {
 
 export const Home = () => {
   return (
-    <Layout>
+    <Layout header_name='Projects' link='/Projects'>
       <div className='flex h-[75vh]'>
         <Presentation />
       </div>
@@ -41,12 +42,12 @@ export const Home = () => {
           icon={<FontAwesomeIcon icon='laptop-code'/>}
         >
           {skills.map((skill: Skill, index: number) => (
-            <div key={index} className='flex flex-col text-white'>
-              <h1 className='py-2 text-xl'>{skill.title}</h1>
+            <div key={ index } className='flex flex-col text-white'>
+              <h1 className='py-2 text-xl'>{ skill.title }</h1>
               <ul className='flex flex-col'>
                 {skill.value.map((value: string, index: number) => (
-                  <li key={index} className='text-white text-md px-2'>
-                    {value}
+                  <li key={ index } className='text-white text-md px-2'>
+                    { value }
                   </li>
                 ))}
               </ul>
@@ -59,16 +60,16 @@ export const Home = () => {
           <div className='flex flex-col items-center text-white w-full'>
             <ul className='text-white w-full'>
               {education.map((education: Education, index: number) => (
-                <div key={index} className='flex flex-col items-center text-white
+                <div key={ index } className='flex flex-col items-center text-white
                 w-full py-2'>
-                  <Disclosure defaultOpen={index === 0}>
+                  <Disclosure defaultOpen={ index === 0 }>
                     <Disclosure.Button className={'w-full h-8'}
                       data-headlessui-state="open">
                       <div className='flex flex-row border rounded-md
                       justify-between gap-4 sm:px-2 px-1 items-center h-10 text-sm
                       sm:text-base sm:h-8'>
-                        <h1 className=''>{education.date}</h1>
-                        <h1 className=''>{education.title}</h1>
+                        <h1 className=''>{ education.date }</h1>
+                        <h1 className=''>{ education.title }</h1>
                         <ChevronUpIcon
                           className="ui-open:rotate-180 ui-open:transform h-5
                           transition-transform duration-500"
@@ -90,12 +91,12 @@ export const Home = () => {
                               icon='location-dot'
                               className='text-red-600'/>
                             </i> &nbsp;
-                            {education.location} - &nbsp;
+                            { education.location } - &nbsp;
                             <FontAwesomeIcon icon='graduation-cap' /> &nbsp;
-                            {education.degree}
+                            { education.degree }
                           </p>
                           <p className='text-white py-2'>
-                            {education.resume}
+                            { education.resume }
                           </p>
                         </div>
                       </Disclosure.Panel>
@@ -111,33 +112,33 @@ export const Home = () => {
         >
           <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full'>
             {projects.map((project: Project, index: number) => (
-              <li key={index} className='flex flex-col text-white
+              <li key={ index } className='flex flex-col text-white
               w-full'>
                 <div className='flex flex-col items-center text-white w-full'>
-                  <img src={logo} alt={project.name}
+                  <img src={ logo } alt={ project.name }
                     className=' rounded-md'/>
-                  <h1 className='text-white text-xl'>{project.name}</h1>
+                  <h1 className='text-white text-xl'>{ project.name }</h1>
                 </div>
                 <div className='flex flex-row gap-4 px-6
                 align-bottom'>
-                  {project.languages.map((langage: {name: string,
-                  image: string},
+                  {project.languages.map((langage: { name: string,
+                  image: string },
                   index: number) => (
                     <div key={index} className='flex flex-col
                     text-white justify-start'>
-                      <img src={langage.image} alt={langage.name}
-                        className='h-4 w-fit'/>
+                      <img src={ langage.image } alt={ langage.name }
+                        className='h-4 w-4 sm:w-fit'/>
                     </div>
                   ))}
                 </div>
                 <div className='flex flex-col items-center text-white w-full py-2'>
                   <p className='text-white text-md px-4'>
-                    {project.description.length > 122 ?
+                    { project.description.length > 122 ?
                       project.description.substring(0, 122)
                         .slice(0, -1)
                         .substring(0,project.description.length - 1)
                         .concat('...')
-                      : project.description}
+                      : project.description }
                   </p>
                 </div>
               </li>
@@ -145,6 +146,7 @@ export const Home = () => {
           </ul>
         </Section>
       </div>
+      <Button>View More</Button>
     </Layout>
   );
 };
