@@ -111,7 +111,7 @@ export const Home = () => {
         >
           <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full'>
             {projects.map((project: Project, index: number) => (
-              <div className='border flex'>
+              <div className=''>
                 <li key={index} className='flex flex-col text-white
                 w-full'>
                   <div className='flex flex-col items-center text-white w-full'>
@@ -121,7 +121,7 @@ export const Home = () => {
                     <p className='text-white text-md px-4'>
                       {project.description}</p>
                   </div>
-                  <div className='flex flex-row gap-4 py-2 px-6 border-t
+                  <div className='flex flex-row gap-4 py-2 px-6
                   align-bottom'>
                     {project.languages.map((langage: {name: string,
                     image: string},

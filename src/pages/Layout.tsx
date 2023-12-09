@@ -9,7 +9,10 @@ const Layout : FunctionComponent<LayoutProps> = ({children}) => {
   return (
     <div className='bg-secondary-480'>
       <Header name="Projects"/>
-      {children}
+      <div className='flex flex-col justify-center items-center h-full
+      max-w-[1440px]'>
+        {children}
+      </div>
       <Footer/>
     </div>
   );
