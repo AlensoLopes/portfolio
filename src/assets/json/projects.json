@@ -6,11 +6,11 @@
     "languages": [
       {
         "name": "Java(FX)",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/131px-Java_programming_language_logo.svg.png"
+        "image": "https://www.vectorlogo.zone/logos/java/java-icon.svg"
       },
       {
         "name": "MySQL",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/131px-MySQL.svg.png"
+        "image": "https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"
       }
     ]
   },
@@ -22,10 +22,6 @@
       {
         "name": "JavaScript",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/131px-Unofficial_JavaScript_logo_2.svg.png"
-      },
-      {
-        "name": "API Rest",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/JSON_vector_logo.svg/131px-JSON_vector_logo.svg.png"
       }
     ]
   },
@@ -36,7 +32,7 @@
     "languages": [
       {
         "name": "React",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/131px-React-icon.svg.png"
+        "image": "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
       },
       {
         "name" : "TypeScript",
@@ -44,7 +40,7 @@
       },
       {
         "name": "TailwindCSS",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Tailwind_CSS_logo.svg/131px-Tailwind_CSS_logo.svg.png"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
       }
     ]
   },
@@ -59,7 +55,7 @@
       },
       {
         "name": "MySQL",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/131px-MySQL.svg.png"
+        "image": "https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"
       }
     ]
   }
