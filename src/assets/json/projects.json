@@ -2,7 +2,7 @@
   {
     "name" : "BattleshipFX",
     "description" : "A JavaFX application that allows you to play the famous Battleship game against an intelligent AI.",
-    "image" : "https://tailwindcss.com/_next/static/media/classic-utility-jacket.82031370.jpg",
+    "image" : "",
     "languages": [
       {
         "name": "Java(FX)",

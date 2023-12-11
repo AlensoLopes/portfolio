@@ -23,7 +23,7 @@ interface Education {
   resume: string;
 }
 
-interface Project {
+export interface Project {
   name: string;
   description: string;
   image?: string;
@@ -112,7 +112,7 @@ export const Home = () => {
         >
           <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full'>
             {projects.map((project: Project, index: number) => (
-              <a href={`Projects/${project.name}`}>
+              <a href={`Projects/${ project.name }`}>
                 <li key={ index } className='flex flex-col text-white
               w-full'>
                   <div className='flex flex-col items-center text-white w-full'>
