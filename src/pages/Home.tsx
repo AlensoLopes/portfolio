@@ -112,12 +112,14 @@ export const Home = () => {
         >
           <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full'>
             {projects.map((project: Project, index: number) => (
-              <a href={`Projects/${ project.name }`}>
+              <a href={`Projects/${ project.name.replaceAll(' ', '') }`}
+                className='rounded-md transition-all duration-300
+                hover:shadow-2xl'>
                 <li key={ index } className='flex flex-col text-white
               w-full'>
                   <div className='flex flex-col items-center text-white w-full'>
                     <img src={ logo } alt={ project.name }
-                      className=' rounded-md'/>
+                      className='rounded-md h-5/6 w-5/6'/>
                     <h1 className='text-white text-xl'>{ project.name }</h1>
                   </div>
                   <div className='flex flex-row gap-4 px-6
