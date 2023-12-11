@@ -4,6 +4,7 @@ import projects from '../assets/json/projects.json';
 import { Project } from './Home';
 import { Section } from '../components';
 import logo from '../assets/pictures/logo-placeholder.jpg';
+
 export const Projects = () => {
   return (
     <Layout header_name='Home' link='/'>
@@ -11,7 +12,7 @@ export const Projects = () => {
         <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full py-8 px-4
         sm:w-10/12'>
           {projects.map((project: Project, index: number) => (
-            <a href={`Projects/${ project.name.replaceAll(' ', '') }`}
+            <a href={`Projects/${ project.name.replaceAll(' ', '_') }`}
               className='rounded-xl transition-all duration-300
               hover:shadow-2xl'>
               <li key={ index } className='flex flex-col text-white

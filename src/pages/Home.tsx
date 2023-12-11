@@ -113,7 +113,7 @@ export const Home = () => {
           <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full'>
             {projects.map((project: Project, index: number) => (
               index < 4 && (
-                <a href={`Projects/${ project.name.replaceAll(' ', '') }`}
+                <a href={`Projects/${ project.name.replaceAll(' ', '_') }`}
                   className='rounded-xl transition-all duration-300
                   hover:shadow-2xl'>
                   <li key={ index } className='flex flex-col text-white
