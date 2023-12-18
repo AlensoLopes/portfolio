@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from '../pages';
 import projects from '../assets/json/projects.json';
 import { Project } from './Home';
-import { Section } from '../components';
+import { Section, BackArrow } from '../components';
 import logo from '../assets/pictures/logo-placeholder.jpg';
 
 export const Projects = () => {
@@ -11,6 +11,9 @@ export const Projects = () => {
       <Section>
         <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full py-8 px-4
         sm:w-10/12'>
+          <li className='flex w-full sm:col-span-2 md:px-6 px-4'>
+            <BackArrow path='/' text='Projects'/>
+          </li>
           {projects.map((project: Project, index: number) => (
             <a href={`Projects/${ project.name.replaceAll(' ', '_') }`}
               className='rounded-xl transition-all duration-300

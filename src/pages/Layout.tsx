@@ -15,7 +15,7 @@ export const Layout : FC<LayoutProps> =
       <Header name={ header_name } link={ link } home_link={ home_link } />
       <div className='flex justify-center items-center'>
         <div className='flex flex-col justify-center items-center h-full
-        max-w-[1440px]'>
+        max-w-[1440px] w-full'>
           { children }
         </div>
       </div>
