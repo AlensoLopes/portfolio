@@ -3,7 +3,6 @@ import { Footer } from './Footer';
 import { Presentation } from './Presentation';
 import { Section } from './Section';
 import { Button } from './Button';
-import { ProjectDesc } from './ProjectDesc';
 import { BackArrow } from './BackArrow';
 
 export{
@@ -12,6 +11,5 @@ export{
   Presentation,
   Section,
   Button,
-  ProjectDesc,
   BackArrow
 };
