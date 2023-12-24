@@ -28,7 +28,7 @@ export const SingleProject = () => {
 
   return (
     <Layout header_name='Projects' link='/Projects' home_link='/'>
-      <div className='w-full'>
+      <div className='w-full px-4'>
         <div className='flex flex-col items-start text-white w-full
         justify-start py-8'>
           <BackArrow path='/Projects' text='Projects'/>
