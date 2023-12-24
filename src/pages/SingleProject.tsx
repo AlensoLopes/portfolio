@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Layout } from './Layout';
 import { useParams } from 'react-router-dom';
 import projects from '../assets/json/projects.json';
-import { BackArrow } from '../components';
+import { BackArrow, ProjectDesc } from '../components';
 import logo from '../assets/pictures/logo-placeholder.jpg';
 import { getCollaborators, Collaborators } from '../utils';
 
@@ -67,30 +67,8 @@ export const SingleProject = () => {
               </div>
             ))}
           </div>
-          <div className='py-4'>
-            <hr/>
-            <div className='flex flex-col text-white w-full py-2'>
-              <div className='text-white py-2 px-4'>
-                <h1 className='text-white text-2xl font-extrabold'>
-                  Description
-                </h1>
-                <p className='text-white py-2'>
-                  Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Architecto, dolores?
-                </p>
-              </div>
-              <div className='text-white py-2 px-4'>
-                <h1 className='text-white text-2xl font-extrabold'>
-                  Features
-                </h1>
-                <p className='text-white py-2'>
-                  Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Architecto, dolores?
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
+        <ProjectDesc description={desc?.description} features='feat'/>
       </div>
     </Layout>
   );

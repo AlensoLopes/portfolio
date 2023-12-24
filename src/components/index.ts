@@ -4,6 +4,7 @@ import { Presentation } from './Presentation';
 import { Section } from './Section';
 import { Button } from './Button';
 import { BackArrow } from './BackArrow';
+import { ProjectDesc } from './ProjectDesc';
 
 export{
   Header,
@@ -11,5 +12,6 @@ export{
   Presentation,
   Section,
   Button,
-  BackArrow
+  BackArrow,
+  ProjectDesc
 };
