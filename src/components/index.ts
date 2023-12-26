@@ -7,8 +7,10 @@ import { BackArrow } from './BackArrow';
 import { ProjectDesc } from './ProjectDesc';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCircleInfo, faList, faImage} from '@fortawesome/free-solid-svg-icons';
+import { faGithub,
+  faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faCircleInfo, faList, faImage);
+library.add(faCircleInfo, faList, faImage, faGithub, faLinkedin);
 
 export{
   Header,

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Footer = () => {
   const date = new Date().getFullYear();
@@ -11,6 +12,15 @@ export const Footer = () => {
         <p className='text-white opacity-80 font-medium'>
         &copy; { date === 2023 ? date : '2023 - ' + date }. All right reserved.
         </p>
+      </div>
+      <div className='text-white opacity-80 font-medium
+        flex flex-row gap-2 items-center'>
+        <a href='https://github.com/AlensoLopes' target='_blank'
+          className='text-lg hover:text-gray-300 transition-all'>
+          <FontAwesomeIcon icon={['fab', 'github']} /></a>
+        <a href='https://linkedin.com/in/alensolopes' target='_blank'
+          className='text-lg hover:text-gray-300 transition-all'>
+          <FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
       </div>
     </footer>
   );
