@@ -12,7 +12,7 @@ export const Projects = () => {
         <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full py-8 px-4
         sm:w-10/12'>
           <li className='flex w-full sm:col-span-2 md:px-6 px-4'>
-            <BackArrow path='/' text='Projects'/>
+            <BackArrow path='/' text='Home'/>
           </li>
           {projects.map((project: Project, index: number) => (
             <a key={ index }
