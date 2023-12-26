@@ -12,6 +12,17 @@
         "name": "MySQL",
         "image": "https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"
       }
+    ],
+    "features": [
+      "This project includes some advenced features such as a database that stores the scores of the players.",
+      "The AI is based on a algorithm that allows it to play intelligently to increase the difficulty of the game.",
+      "The application is available on every platform thanks to JavaFX.",
+      "The application is easy to use, you just have to click on the cells to place your ships and to attack the enemy's ships."
+    ],
+    "pictures": [
+      "https://i.imgur.com/9Z3ZQ8M.png",
+      "https://i.imgur.com/9Z3ZQ8M.png",
+      "https://i.imgur.com/9Z3ZQ8M.png"
     ]
   },
   {
@@ -26,7 +37,7 @@
     ]
   },
   {
-    "name": "My Portfolio",
+    "name": "Portfolio",
     "description": "After acquiring a wide range of skills, I decided to create my own portfolio to showcase my projects and my skills and to help with my intern research.",
     "image": "",
     "languages": [

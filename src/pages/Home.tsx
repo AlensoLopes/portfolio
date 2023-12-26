@@ -151,7 +151,7 @@ export const Home = () => {
           </ul>
         </Section>
       </div>
-      <Button>View More</Button>
+      <Button link='/Projects'>View More</Button>
     </Layout>
   );
 };

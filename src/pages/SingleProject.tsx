@@ -45,15 +45,17 @@ export const SingleProject = () => {
               (collaborators ? collaborators.map((collaborator: Collaborators,
                 index: number) => (
                 (collaborator.login === 'princecorg' ? null :
-                  <div key={index} className='flex flex-col text-white px-2'>
-                    <a href={collaborator.html_url} target='_blank'>
-                      <img
-                        src={collaborator.avatar_url}
-                        alt={collaborator.login}
-                        className='h-6 w-6 sm:w-fit rounded-xl'
-                      />
-                    </a>
-                  </div>
+                  (
+                    <div key={index} className='flex flex-col text-white px-2'>
+                      <a href={ collaborator.html_url } target='_blank'>
+                        <img
+                          src={collaborator.avatar_url}
+                          alt={collaborator.login}
+                          className='h-6 w-6 sm:w-fit rounded-xl'
+                        />
+                      </a>
+                    </div>
+                  )
                 )
               )) : (null)
               )}
@@ -68,7 +70,9 @@ export const SingleProject = () => {
             ))}
           </div>
         </div>
-        <ProjectDesc description={desc?.description} features='feat'/>
+        <ProjectDesc description={desc?.description}
+          features={desc?.features} pictures={desc?.pictures}
+          github_link={ `https://github.com/AlensoLopes/${desc?.name}` }/>
       </div>
     </Layout>
   );
