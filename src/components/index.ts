@@ -9,6 +9,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCircleInfo, faList, faImage} from '@fortawesome/free-solid-svg-icons';
 
 library.add(faCircleInfo, faList, faImage);
+
 export{
   Header,
   Footer,

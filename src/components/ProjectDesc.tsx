@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Button } from '../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 interface IProjectDesc {
   description ?: string | undefined ;
@@ -72,6 +73,8 @@ export const ProjectDesc : FC<IProjectDesc> =
             <Button link={ github_link }
               target={ true }>
                 View on Github
+              <span className='text-white text-lg'>
+                <FontAwesomeIcon icon={['fab', 'github']} /></span>
             </Button>
           ) : null}
         </div>
