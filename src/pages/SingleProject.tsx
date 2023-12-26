@@ -25,7 +25,6 @@ export const SingleProject = () => {
     };
     fetchCollaborators();
   }, []);
-
   return (
     <Layout header_name='Projects' link='/Projects' home_link='/'>
       <div className='w-full px-4'>
