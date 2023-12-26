@@ -15,7 +15,8 @@ export const Projects = () => {
             <BackArrow path='/' text='Projects'/>
           </li>
           {projects.map((project: Project, index: number) => (
-            <a href={`Projects/${ project.name.replaceAll(' ', '_') }`}
+            <a key={ index }
+              href={`Projects/${ project.name.replaceAll(' ', '_') }`}
               className='rounded-xl transition-all duration-300
               hover:shadow-2xl'>
               <li key={ index } className='flex flex-col text-white
