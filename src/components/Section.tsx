@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-
 interface ISection {
   title?: string;
   children: ReactNode;

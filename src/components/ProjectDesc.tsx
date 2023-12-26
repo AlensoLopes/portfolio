@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import { Button } from '../components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface IProjectDesc {
-  description ?: string | undefined;
+  description ?: string | undefined ;
   features ?: string[] | undefined;
   pictures ?: string[] | undefined;
   github_link ?: string | undefined;
@@ -14,7 +15,10 @@ export const ProjectDesc : FC<IProjectDesc> =
       <section className='py-4 flex flex-col'>
         <hr/>
         <div className='text-white py-2 px-4'>
-          <h1 className='text-white text-2xl font-extrabold'>
+          <h1 className='text-white text-2xl font-extrabold
+            flex flex-row items-center gap-2'>
+            <span className='text-white text-lg'>
+              <FontAwesomeIcon icon='circle-info'/></span>
             Description
           </h1>
           { description !== undefined ? (
@@ -26,7 +30,10 @@ export const ProjectDesc : FC<IProjectDesc> =
           )}
         </div>
         <div className='text-white py-2 px-4'>
-          <h1 className='text-white text-2xl font-extrabold'>
+          <h1 className='text-white text-2xl font-extrabold gap-2 flex flex-row
+            items-center'>
+            <span className='text-white text-lg'>
+              <FontAwesomeIcon icon='list'/></span>
             Features
           </h1>
           { features !== undefined ? (
@@ -39,7 +46,10 @@ export const ProjectDesc : FC<IProjectDesc> =
           ) : <p className='text-gray-100 px-2'>Coming soon...</p>}
         </div>
         <div className='text-white py-2 px-4'>
-          <h1 className='text-white text-2xl font-extrabold'>
+          <h1 className='text-white text-2xl font-extrabold gap-2 flex flex-row
+            items-center'>
+            <span className='text-white text-lg'>
+              <FontAwesomeIcon icon='image'/></span>
             Pictures
           </h1>
           { pictures !== undefined ? (

@@ -10,6 +10,7 @@ export const SingleProject = () => {
   const params = useParams();
   const desc = projects.find((project) => project.name ===
     params.p_id?.replaceAll('_', ' '));
+
   const [collaborators, setCollaborators] =
     React.useState<Collaborators[] | null>(null);
 
