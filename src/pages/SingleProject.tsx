@@ -72,7 +72,8 @@ export const SingleProject = () => {
         </div>
         <ProjectDesc description={desc?.description}
           features={desc?.features} pictures={desc?.pictures}
-          github_link={ `https://github.com/AlensoLopes/${desc?.name}` }/>
+          github_link={ desc?.private?.toString() === 'true' ?
+            '': `https://github.com/AlensoLopes/${desc?.name}` }/>
       </div>
     </Layout>
   );

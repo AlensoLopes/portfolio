@@ -68,6 +68,7 @@
         "name": "MySQL",
         "image": "https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"
       }
-    ]
+    ],
+    "private": true
   }
 ]

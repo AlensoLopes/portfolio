@@ -5,7 +5,7 @@ interface IProjectDesc {
   description : string | undefined;
   features : string[] | undefined;
   pictures ?: string[] | undefined;
-  github_link : string | undefined;
+  github_link ?: string | undefined;
 }
 
 export const ProjectDesc : FC<IProjectDesc> =
@@ -47,10 +47,12 @@ export const ProjectDesc : FC<IProjectDesc> =
           )))}
         </div>
         <div className='flex flex-col py-4 px-2'>
-          <Button link={ github_link }
-            target={ true }>
-            View on Github
-          </Button>
+          { github_link !== '' ? (
+            <Button link={ github_link }
+              target={ true }>
+                View on Github
+            </Button>
+          ) : null}
         </div>
       </section>
     );
