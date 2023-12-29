@@ -24,6 +24,6 @@ yarn-error.log*
 
 #Config directory
 
-conf/
+env.ts
 # Local Netlify folder
 .netlify
