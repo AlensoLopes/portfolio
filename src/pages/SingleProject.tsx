@@ -10,10 +10,8 @@ export const SingleProject = () => {
   const params = useParams();
   const desc = projects.find((project) => project.name ===
     params.p_id?.replaceAll('_', ' '));
-
   const [collaborators, setCollaborators] =
     React.useState<Collaborators[] | null>(null);
-
   useEffect(() => {
     const fetchCollaborators = async () => {
       try {
@@ -35,8 +33,8 @@ export const SingleProject = () => {
         </div>
         <div className='flex flex-col items-center justify-center
         text-white w-full'>
-          <img src={ desc?.image ? desc.image : logo } alt={ params.p_id }
-            className='rounded-md h-fit w-full'/>
+          <img src={ desc?.image_ban ? desc?.image_ban : logo } alt={ params.p_id }
+            className='rounded-md w-full object-cover h-96' />
         </div>
         <div className='flex flex-col justify-start py-4'>
           <div className='flex flex-row items-center'>

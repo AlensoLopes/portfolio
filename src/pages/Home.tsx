@@ -118,10 +118,12 @@ export const Home = () => {
                   className='rounded-xl transition-all duration-300
                   hover:shadow-2xl'>
                   <li key={ index } className='flex flex-col text-white
-                w-full'>
-                    <div className='flex flex-col items-center text-white w-full'>
-                      <img src={ logo } alt={ project.name }
-                        className='rounded-md h-[92%] w-[92%]'/>
+                  w-full'>
+                    <div className='flex flex-col items-center text-white w-full
+                      h-[25rem]'>
+                      <img src={ project?.image ? project?.image : logo }
+                        alt={ project.name }
+                        className='rounded-md h-[92%] w-[92%] object-cover'/>
                       <h1 className='text-white text-xl'>{ project.name }</h1>
                     </div>
                     <div className='flex flex-row gap-4 px-6

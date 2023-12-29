@@ -45,6 +45,7 @@ export const ProjectDesc : FC<IProjectDesc> =
             )
           ) : <p className='text-gray-100 px-2'>Coming soon...</p>}
         </div>
+        <hr/>
         <div className='text-white py-2 px-4'>
           <h1 className='text-white text-2xl font-extrabold gap-2 flex flex-row
             items-center'>

@@ -1,8 +1,9 @@
 [
   {
     "name" : "BattleshipFX",
-    "description" : "A JavaFX application that allows you to play the famous Battleship game against an intelligent AI.",
-    "image" : "",
+    "description" : "BattleshipFX is a JavaFX application that allows you to play at BattleShip against an AI. First I created a console version of the game, then I decided to create a GUI version of it to make the application easy to use.",
+    "image" : "https://i.ibb.co/N1M8CJD/Battleship-FX-bis.png",
+    "image_ban" : "https://i.ibb.co/tc9SGB7/Battleship-FX.png",
     "languages": [
       {
         "name": "Java(FX)",
@@ -27,19 +28,26 @@
   },
   {
     "name" : "Instant-Weather",
-    "description" : "A JavaScript application that displays the current weather for a given location.",
-    "image" : "",
+    "description" : "A JavaScript application that displays the current weather for a given location. This applications uses the France Geograhic API to get all the French cities then it uses the Meteo Concept api to fetch the weather for the selected city.",
+    "image" : "https://i.ibb.co/Njjs54n/Instant-weather.png",
+    "image_ban" : "https://i.ibb.co/ZG4cF5C/Instant-weather-ban.png",
     "languages": [
       {
         "name": "JavaScript",
         "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
       }
+    ],
+    "features": [
+      "This project uses the France Geograhic API to get all the French cities then it uses the Meteo Concept api to fetch the weather for the selected city.",
+      "This website is intuitive and easy to use, you just have to select a city and the application will display the current weather for this city.",
+      "The website is responsive and can be used on every device."
     ]
   },
   {
     "name": "Portfolio",
-    "description": "After acquiring a wide range of skills, I decided to create my own portfolio to showcase my projects and my skills and to help with my intern research.",
-    "image": "",
+    "description": "After acquiring a wide range of skills, I decided to create my own portfolio to showcase my projects and my skills and to help with my intern research. I decided to use React to create this website because I wanted to learn this framework and I wanted to create a website that is easy to maintain.",
+    "image": "https://i.ibb.co/Q9Hzrvt/Portfolio.png",
+    "image_ban": "https://i.ibb.co/yPyXqZh/Portfolio-ban.png",
     "languages": [
       {
         "name": "React",
@@ -53,11 +61,16 @@
         "name": "TailwindCSS",
         "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
       }
+    ],
+    "features": [
+      "This website was created with React and TypeScript.",
+      "The website is responsive and can be used on every device.",
+      "The website is easy to use and intuitive, you just have to click on the projects to get more informations about them."
     ]
   },
   {
     "name" : "Petit-Cuistot",
-    "description" : "A PHP application that allows users to share recipes and comment on them.",
+    "description" : "A PHP application that allows users to share recipes and comment on them. This project was created during my second year of BUT in Computer Science. This project was created with a team of 4 people.",
     "image" : "",
     "languages": [
       {
@@ -68,6 +81,12 @@
         "name": "MySQL",
         "image": "https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"
       }
+    ],
+    "features": [
+      "This project uses a MySQL database to store the recipes and the comments.",
+      "This project uses PHP to create the website and to interact with the database.",
+      "This project includes a login system that allows users to create an account and to post recipes and comments.",
+      "This project includes a search bar that allows users to search for recipes."
     ],
     "private": true
   }
