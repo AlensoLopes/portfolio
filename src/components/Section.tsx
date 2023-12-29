@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 interface ISection {
   title?: string;
   children: ReactNode;
-  icon?: any;
+  icon?: ReactNode;
 }
 
 export const Section: FC<ISection> = ({ title, children, icon }) => {

@@ -4,7 +4,7 @@ export interface Collaborators{
   html_url: string;
 }
 
-export async function getCollaborators(owner: string, repo?: string)
+export async function getCollaborators()
   : Promise<Collaborators[]> {
   return proccessCollaboratorData(new Array<Collaborators>());
 //   const url =
