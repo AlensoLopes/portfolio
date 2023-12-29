@@ -56,6 +56,9 @@ export const ProjectDesc : FC<IProjectDesc> =
           { pictures !== undefined ? (
             <div className='grid md:grid-cols-2 grid-cols-1 gap-4 w-full py-4
             justify-center'>
+              {pictures.length === 0 ? (
+                <p className='text-gray-100 px-2'>Coming soon...</p>
+              ) : null}
               {pictures && (pictures.map((picture: string, index: number) => (
                 <div key={index} className='rounded-md transition-all duration-300
                     hover:shadow-2xl justify-center flex'>

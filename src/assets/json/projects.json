@@ -21,9 +21,6 @@
       "The application is easy to use, you just have to click on the cells to place your ships and to attack the enemy's ships."
     ],
     "pictures": [
-      "https://i.imgur.com/9Z3ZQ8M.png",
-      "https://i.imgur.com/9Z3ZQ8M.png",
-      "https://i.imgur.com/9Z3ZQ8M.png"
     ]
   },
   {
@@ -41,6 +38,8 @@
       "This project uses the France Geograhic API to get all the French cities then it uses the Meteo Concept api to fetch the weather for the selected city.",
       "This website is intuitive and easy to use, you just have to select a city and the application will display the current weather for this city.",
       "The website is responsive and can be used on every device."
+    ],
+    "pictures": [
     ]
   },
   {
@@ -66,12 +65,15 @@
       "This website was created with React and TypeScript.",
       "The website is responsive and can be used on every device.",
       "The website is easy to use and intuitive, you just have to click on the projects to get more informations about them."
+    ],
+    "pictures": [
     ]
   },
   {
     "name" : "Petit-Cuistot",
     "description" : "A PHP application that allows users to share recipes and comment on them. This project was created during my second year of BUT in Computer Science. This project was created with a team of 4 people.",
-    "image" : "",
+    "image" : "https://i.ibb.co/7pMHdTG/Ptit-cuistot.png",
+    "image_ban" : "https://i.ibb.co/7pMHdTG/Ptit-cuistot.png",
     "languages": [
       {
         "name": "PHP",
@@ -88,6 +90,26 @@
       "This project includes a login system that allows users to create an account and to post recipes and comments.",
       "This project includes a search bar that allows users to search for recipes."
     ],
+    "pictures": [
+    ],
     "private": true
+  },
+  {
+    "name": "Anti-ForceDownload",
+    "description": "A little JavaScript extension that allows you to block the forced download of files on the ecampus site for the University of Caen Normandy.",
+    "image": "https://webcemu.unicaen.fr/dokuwiki/lib/exe/fetch.php?w=600&tok=b1321a&media=moodle:pasted:20200827-110257.png",
+    "image_ban": "https://webcemu.unicaen.fr/dokuwiki/lib/exe/fetch.php?w=600&tok=b1321a&media=moodle:pasted:20200827-110257.png",
+    "languages": [
+      {
+        "name": "JavaScript",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+      }
+    ],
+    "features": [
+      "This extension was created with JavaScript.",
+      "This extension is easy to use, you just have to install it and it will block the forced download of files on the ecampus site for the University of Caen Normandy."
+    ],
+    "pictures": [
+    ]
   }
 ]
