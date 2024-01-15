@@ -1,6 +1,6 @@
 # Alenso's Portfolio
 
-Welcome to my personal portfolio, accessible at [alenso.dev](https://alenso.dev). This project was developed using React and TypeScript to showcase my skills, projects, and professional experiences.
+Welcome to my personal portfolio, accessible at [alenso.dev](https://alenso.dev). This project was developed using React and TypeScript to showcase my skills and projects. 
 
 ## Technologies Used
 
