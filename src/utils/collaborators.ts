@@ -4,18 +4,17 @@ export interface Collaborators{
   html_url: string;
 }
 
-export async function getCollaborators()
+export async function getCollaborators(owner: string, repo?: string)
   : Promise<Collaborators[]> {
-  return proccessCollaboratorData(new Array<Collaborators>());
-//   const url =
-//     `https://api.github.com/repos/${owner}/${repo}/collaborators`;
-//   const response : Response = await fetch(url, {
-//     headers: {
-//       Authorization: `token ${process.env.REACT_APP_API_GITHUB}`
-//     }
-//   });
-//   const data : Collaborators[] = await response.json();
-//   return proccessCollaboratorData(data);
+  const url =
+    `https://api.github.com/repos/${owner}/${repo}/collaborators`;
+  const response : Response = await fetch(url, {
+    headers: {
+      Authorization: `token ${process.env.REACT_APP_TOKEN}`
+    }
+  });
+  const data : Collaborators[] = await response.json();
+  return proccessCollaboratorData(data);
 }
 
 function proccessCollaboratorData(collaborators : Collaborators[])

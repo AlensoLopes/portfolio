@@ -1,28 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Layout } from './Layout';
 import { useParams } from 'react-router-dom';
 import projects from '../assets/json/projects.json';
 import { BackArrow, ProjectDesc } from '../components';
 import logo from '../assets/pictures/logo-placeholder.jpg';
+import { Collaborators, getCollaborators } from '../utils';
 
 export const SingleProject = () => {
   const params = useParams();
   const desc = projects.find((project) => project.name ===
     params.p_id?.replaceAll('_', ' '));
-  // const [collaborators, setCollaborators] =
-  //   React.useState<Collaborators[] | null>(null);
-  // useEffect(() => {
-  //   const fetchCollaborators = async () => {
-  //     try {
-  //       const collaboratorsData = await getCollaborators('alensolopes',
-  //         params.p_id?.replaceAll('_', ' '));
-  //       setCollaborators(collaboratorsData);
-  //     } catch (error) {
-  //       console.error('Error fetching collaborators:', error);
-  //     }
-  //   };
-  //   fetchCollaborators();
-  // }, []);
+  const [collaborators, setCollaborators] =
+    React.useState<Collaborators[] | null>(null);
+  useEffect(() => {
+    const fetchCollaborators = async () => {
+      try {
+        const collaboratorsData = await getCollaborators('alensolopes',
+          params.p_id?.replaceAll('_', ' '));
+        setCollaborators(collaboratorsData);
+      } catch (error) {
+        console.error('Error fetching collaborators:', error);
+      }
+    };
+    fetchCollaborators();
+  }, []);
   return (
     <Layout header_name='Projects' link='/Projects' home_link='/'>
       <div className='w-full px-4'>
@@ -38,7 +39,7 @@ export const SingleProject = () => {
         <div className='flex flex-col justify-start py-4'>
           <div className='flex flex-row items-center'>
             <h1 className='text-white text-2xl font-bold'>{ params.p_id }</h1>
-            {/* {
+            {
               (collaborators ? collaborators.map((collaborator: Collaborators,
                 index: number) => (
                 (collaborator.login === 'princecorg' ? null :
@@ -55,7 +56,7 @@ export const SingleProject = () => {
                   )
                 )
               )) : (null)
-              )} */}
+              )}
           </div>
           <div className='flex flex-row gap-2 py-2'>
             { desc?.languages.map((langage: { name?: string, image?: string },
