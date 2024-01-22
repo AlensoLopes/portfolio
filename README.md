@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Alenso's Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio, accessible at [alenso.dev](https://alenso.dev). This project was developed using React and TypeScript to showcase my skills and projects. 
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that adds static typing features.
+- **Other Dependencies**: Check the `package.json` file for the complete list of dependencies.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Home Page**: Brief introduction with quick links to relevant sections.
+- **Portfolio**: A gallery of projects with descriptions, screenshots, and links to GitHub repositories or online versions.
+- **Technical Skills**: A list of my technical skills and tools I frequently use.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+2. Clone this repository with the command:
+   ```bash
+   git clone https://github.com/AlensoLopes/portfolio.git
+   ```
+3. Navigate to the project directory:
+   ```bash
+   cd portfolio
+   ```
+4. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+1. Start the application in development mode:
+   ```bash
+   npm start
+   ```
+   This will launch the application at [http://localhost:3000](http://localhost:3000).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. To build an optimized production version:
+   ```bash
+   npm run build
+   ```
+   The build artifacts will be stored in the `build/` directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Feel free to explore the portfolio, and don't hesitate to reach out through the provided contact information!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License 📜
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+My Portfolio is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the software in accordance with the terms of this license.
