@@ -18,7 +18,8 @@ export const Projects = () => {
             <a key={ index }
               href={`Projects/${ project.name.replaceAll(' ', '_') }`}
               className='rounded-xl transition-all duration-300
-              hover:shadow-2xl'>
+              hover:shadow-2xl border-2 border-secondary-450 py-2
+              hover:-translate-y-0.5 bg-secondary-500'>
               <li key={ index } className='flex flex-col text-white
                 w-full object-cover '>
                 <div className='flex flex-col items-center
