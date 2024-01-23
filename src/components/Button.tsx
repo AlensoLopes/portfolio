@@ -12,7 +12,7 @@ export const Button : FC<ButtonProps> = ({ children, link, target = false }) => 
       <a href={ link }
         className='bg-tertiary-450 hover:border-secondary-450 text-white
         px-4 rounded-md border border-white transition-all flex
-        flex-row gap-2 items-center' target=
+        flex-row gap-2 items-center text-xl' target=
           { target ? '_blank' : '_parent' } >
         { children }
       </a>
