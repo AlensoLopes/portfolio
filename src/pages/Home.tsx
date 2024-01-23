@@ -46,7 +46,7 @@ export const Home = () => {
               <h1 className='py-2 text-xl font-semibold'>{ skill.title }</h1>
               <ul className='flex flex-col'>
                 {skill.value.map((value: string, index: number) => (
-                  <li key={ index } className='text-white text-md px-2'>
+                  <li key={ index } className='text-white text-md '>
                     { value }
                   </li>
                 ))}
@@ -67,7 +67,7 @@ export const Home = () => {
                       data-headlessui-state="open">
                       <div className='flex flex-row border rounded-md
                       justify-between gap-4 sm:px-2 px-1 items-center h-10 text-sm
-                      sm:text-base sm:h-8'>
+                      sm:text-base sm:h-8 '>
                         <h1 className=''>{ education.date }</h1>
                         <h1 className=''>{ education.title }</h1>
                         <ChevronUpIcon
