@@ -6,7 +6,8 @@
       "TypeScript",
       "C",
       "PHP",
-      "SQL"
+      "SQL",
+      "Python"
     ]
   },
   {
@@ -15,7 +16,8 @@
       "React",
       "ExpressJS",
       "Laravel",
-      "Tailwindcss"
+      "Tailwindcss",
+      "VueJS"
     ]
   },
   {

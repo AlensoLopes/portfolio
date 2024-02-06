@@ -111,5 +111,37 @@
     ],
     "pictures": [
     ]
+  },
+  {
+    "name": "Nautilius",
+    "description": "A application for a diving company that make the inscription easier. This project was created at the end of my first semester of my second year of BUT in Computer Science",
+    "image": "",
+    "image_ban": "",
+    "languages": [
+      {
+        "name": "Laravel",
+        "image": ""
+      },
+      {
+        "name": "JavaScript",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+      },
+      {
+        "name": "TailwindCSS",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+      },
+      {
+        "name": "MySQL",
+        "image": "https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"
+      }
+    ],
+    "features": [
+      "This application was made using Laravel that is a PHP framework",
+      "This application include the connection, inscription for a diving and all thr administration part",
+      "This application was made with the agil method in a 10 persons team",
+      "This application was made in 3,5 day"
+    ],
+    "pictures": [
+    ]
   }
 ]

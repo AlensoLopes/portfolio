@@ -68,12 +68,14 @@ export const Home = () => {
                       <div className='flex flex-row border rounded-md
                       justify-between gap-4 sm:px-2 px-1 items-center h-10 text-sm
                       sm:text-base sm:h-8 '>
-                        <h1 className=''>{ education.date }</h1>
                         <h1 className=''>{ education.title }</h1>
-                        <ChevronUpIcon
-                          className="ui-open:rotate-180 ui-open:transform h-5
+                        <div className='flex flex-row items-center gap-2'>
+                          <h1>{ education.date }</h1>
+                          <ChevronUpIcon
+                            className="ui-open:rotate-180 ui-open:transform h-5
                           transition-transform duration-500"
-                        />
+                          />
+                        </div>
                       </div>
                     </Disclosure.Button>
                     <Transition
