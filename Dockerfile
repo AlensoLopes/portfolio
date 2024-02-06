@@ -1,23 +1,17 @@
-# Use Node.js as base image
-FROM node:18-alpine
+FROM node:18.17.1-alpine as builder
 
-# Set working directory inside the container
 WORKDIR /app
+COPY package.json ./
+COPY package-lock.json ./
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application code to the working directory
-COPY . .
-
-# Build the React app for production
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm install -g serve
 RUN npm run build
 
-# Expose port 3000
-EXPOSE 3000
-
-# Command to run the React app
-CMD ["npm", "start"]
+# production environment
+FROM nginx:1.22.0
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=builder ./build .
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
