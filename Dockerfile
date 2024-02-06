@@ -1,6 +1,6 @@
 FROM node:18.17.1-alpine as builder
 
-WORKDIR /app
+WORKDIR ./
 COPY package.json ./
 COPY package-lock.json ./
 
@@ -13,5 +13,5 @@ RUN npm run build
 FROM nginx:1.10.0
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
-COPY --from=builder /app/build .
+COPY --from=builder ./build .
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
