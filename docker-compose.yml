@@ -1,9 +1,9 @@
-version: "3.8"
+version: '3'
 services:
-  app:
-    container_name: docker-portflio
-    image: docker-react-i
-    build:
-      context: .
+  react-app:
+    build: .
     ports:
       - "3000:3000"
+    volumes:
+      - .:/app
+    stdin_open: true
