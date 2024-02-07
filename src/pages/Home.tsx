@@ -33,6 +33,7 @@ export interface Project {
 
 export const Home = () => {
   const navigate = useNavigate();
+
   return (
     <Layout header_name='Projects' link='/Projects'>
       <div className='flex h-[75vh]'>

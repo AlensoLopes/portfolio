@@ -10,7 +10,6 @@ interface HeaderProps {
 
 export const Header: FC<HeaderProps> = ({ name, link, home_link }) => {
   const navigate = useNavigate();
-  const navigateTo = link ? link : '/';
   return (
     <header className='px-5 lg:px-52 py-4 flex flex-row justify-between
     items-center sticky z-10 top-0 bg-secondary-500 backdrop-blur-sm'>
@@ -24,7 +23,8 @@ export const Header: FC<HeaderProps> = ({ name, link, home_link }) => {
             className='hover:underline px-4'>
               Home
           </button>}
-          <button onClick={() => navigate(navigateTo)} className='hover:underline'>
+          <button onClick={() => navigate(link ? link : '/')}
+            className='hover:underline'>
             { name }
           </button>
         </h1>
