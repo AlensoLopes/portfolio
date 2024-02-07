@@ -9,6 +9,7 @@ import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
 import logo from '../assets/pictures/logo-placeholder.jpg';
 import { Button } from '../components';
+import { useNavigate } from 'react-router-dom';
 
 interface Skill {
   title: string;
@@ -31,6 +32,7 @@ export interface Project {
 }
 
 export const Home = () => {
+  const navigate = useNavigate();
   return (
     <Layout header_name='Projects' link='/Projects'>
       <div className='flex h-[75vh]'>
@@ -115,8 +117,9 @@ export const Home = () => {
           <ul className='grid sm:grid-cols-2 grid-cols-1 gap-4 w-full'>
             {projects.map((project: Project, index: number) => (
               index < 4 && (
-                <a key={ index }
-                  href={`Projects/${ project.name.replaceAll(' ', '_') }`}
+                <button key={ index }
+                  onClick={() => navigate('/Projects/' +
+                    project.name.replaceAll(' ', '_'))}
                   className='rounded-xl transition-all duration-300
                   hover:shadow-2xl border-2 border-secondary-450 py-2
                   hover:-translate-y-0.5 bg-secondary-500'>
@@ -152,7 +155,7 @@ export const Home = () => {
                       </p>
                     </div>
                   </li>
-                </a>
+                </button>
               )))}
           </ul>
         </Section>

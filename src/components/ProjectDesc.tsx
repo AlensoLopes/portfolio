@@ -73,12 +73,16 @@ export const ProjectDesc : FC<IProjectDesc> =
         </div>
         <div className='flex flex-col py-4 px-2'>
           { github_link !== '' ? (
-            <Button link={ github_link }
-              target={ true }>
+            <div className='flex flex-col items-center justify-center py-8'>
+              <a href={ github_link }
+                className='bg-tertiary-450 hover:border-secondary-450 text-white
+                px-4 rounded-md border border-white transition-all flex
+                flex-row gap-2 items-center text-xl' target='_blank'>
                 View on Github
-              <span className='text-white text-lg'>
-                <FontAwesomeIcon icon={['fab', 'github']} /></span>
-            </Button>
+                <span className='text-white text-lg'>
+                  <FontAwesomeIcon icon={['fab', 'github']} /></span>
+              </a>
+            </div>
           ) : null}
         </div>
       </section>

@@ -4,8 +4,10 @@ import projects from '../assets/json/projects.json';
 import { Project } from './Home';
 import { Section, BackArrow } from '../components';
 import logo from '../assets/pictures/logo-placeholder.jpg';
+import { useNavigate } from 'react-router-dom';
 
 export const Projects = () => {
+  const navigate = useNavigate();
   return (
     <Layout header_name='Home' link='/'>
       <Section>
@@ -15,8 +17,8 @@ export const Projects = () => {
             <BackArrow path='/' text='Home'/>
           </li>
           {projects.map((project: Project, index: number) => (
-            <a key={ index }
-              href={`Projects/${ project.name.replaceAll(' ', '_') }`}
+            <button key={ index }
+              onClick={() => navigate(project.name.replaceAll(' ', '_'))}
               className='rounded-xl transition-all duration-300
               hover:shadow-2xl border-2 border-secondary-450 py-2
               hover:-translate-y-0.5 bg-secondary-500'>
@@ -53,7 +55,7 @@ export const Projects = () => {
                   </p>
                 </div>
               </li>
-            </a>
+            </button>
           ))}
         </ul>
       </Section>

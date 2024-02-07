@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface BackArrowProps {
   path ?: string
@@ -6,8 +7,10 @@ interface BackArrowProps {
 }
 
 export const BackArrow : FC<BackArrowProps> = ({ path, text }) => {
+  const navigate = useNavigate();
+  const navigateTo = path ? path : '/';
   return (
-    <a href={path}>
+    <button onClick={() => navigate(navigateTo)}>
       <div className='flex text-white border rounded-md text-xl items-center
       hover:border-secondary-450 transition-all px-2'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -19,6 +22,6 @@ export const BackArrow : FC<BackArrowProps> = ({ path, text }) => {
 
         <h1 className='px-2'>{text}</h1>
       </div>
-    </a>
+    </button>
   );
 };
