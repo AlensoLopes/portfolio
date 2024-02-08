@@ -136,20 +136,16 @@ export const Home = () => {
                     <div className='flex flex-row gap-4 px-6
                     align-bottom'>
                       {project.languages.map((langage: { name: string,
-                      image: string },
-                      index: number) => (
-                        <div key={index} className='flex flex-col
-                        text-white'>
-                          <img src={ langage.image } alt={ langage.name }
-                            className='h-4 w-4 sm:w-fit'/>
-                        </div>
+                      image: string }) => (
+                        <img src={ langage.image } alt={ langage.name }
+                          className='h-4 w-4 sm:w-fit'/>
                       ))}
                     </div>
-                    <div className='flex flex-row justify-center
+                    <div className='flex flex-col
                     text-white w-full py-2 px-2'>
-                      <p className='text-white text-md px-4'>
-                        { project.description.length > 122 ?
-                          project.description.substring(0, 122)
+                      <p className='text-white text-md px-4 text-justify'>
+                        { project.description.length > 120 ?
+                          project.description.substring(0, 120)
                             .slice(0, -1)
                             .concat('...')
                           : project.description }

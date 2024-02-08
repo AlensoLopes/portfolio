@@ -45,9 +45,9 @@ export const Projects = () => {
                 </div>
                 <div className='flex flex-col items-center
                 text-white w-full py-2 px-2'>
-                  <p className='text-white text-md px-4'>
-                    { project.description.length > 122 ?
-                      project.description.substring(0, 122)
+                  <p className='text-white text-md px-4 text-justify'>
+                    { project.description.length > 120 ?
+                      project.description.substring(0, 120)
                         .slice(0, -1)
                         .substring(0,project.description.length - 1)
                         .concat('...')
