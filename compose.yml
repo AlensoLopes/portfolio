@@ -1,8 +1,0 @@
-version: "3"
-
-services:
-  portfolio:
-    image: "portfolio"
-    ports:
-      - 8080:80
-    container_name: "portfolio"
