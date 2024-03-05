@@ -12,18 +12,18 @@ export const SingleProject = () => {
     params.p_id?.replaceAll('_', ' '));
   const [collaborators, setCollaborators] =
     React.useState<Collaborators[] | null>(null);
-  useEffect(() => {
-    const fetchCollaborators = async () => {
-      try {
-        const collaboratorsData = await getCollaborators('alensolopes',
-          params.p_id?.replaceAll('_', ' '));
-        setCollaborators(collaboratorsData);
-      } catch (error) {
-        console.error('Error fetching collaborators:', error);
-      }
-    };
-    fetchCollaborators();
-  }, []);
+  // useEffect(() => {
+  //   const fetchCollaborators = async () => {
+  //     try {
+  //       const collaboratorsData = await getCollaborators('alensolopes',
+  //         params.p_id?.replaceAll('_', ' '));
+  //       setCollaborators(collaboratorsData);
+  //     } catch (error) {
+  //       console.error('Error fetching collaborators:', error);
+  //     }
+  //   };
+  //   fetchCollaborators();
+  // }, []);
   return (
     <Layout header_name='Projects' link='/Projects' home_link='/'>
       <div className='w-full px-4'>
