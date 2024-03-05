@@ -20,4 +20,6 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         key: ${{ secrets.SSHKEY }}
         script: |
-              cd ~/docker/portfolio && sudo docker image build --no-cache -t portfolio . && sudo docker compose restart portfolio
+              cd ~/docker/portfolio && sudo docker image build --no-cache -t portfolio . && 
+              sudo docker compose stop portfolio && sudo docker compose rm portfolio 
+              && sudo docker compose create portfolio && sudo docker compose start portfolio
