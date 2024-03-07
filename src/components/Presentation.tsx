@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Presentation = () => {
   return (
-    <div className='flex flex-col-reverse items-center px-4 sm:flex-row
-    sm:justify-between justify-center'>
+    <div className='flex flex-col-reverse items-center px-4 lg:flex-row
+    lg:justify-between justify-center'>
       <div className='flex flex-col items-center px-4 gap-2 lg:px-32'>
         <h1 className='text-white
           text-2xl'>Hi, I am Alenso Lopes.</h1>
